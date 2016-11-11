@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html>
+    <head>
+    <!--
+        Customize the content security policy in the meta tag below as needed. Add 'unsafe-inline' to default-src to enable inline JavaScript.
+        For details, see http://go.microsoft.com/fwlink/?LinkID=617521
+    -->
+        <meta http-equiv="Content-Security-Policy" content="default-src 'self' data: gap: http://api.openweathermap.org https://ssl.gstatic.com 'unsafe-eval'; style-src 'self' 'unsafe-inline'; media-src *">
+        
+        <meta name="format-detection" content="telephone=no">
+        <meta name="msapplication-tap-highlight" content="no">
+        <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width">
+        <link rel="stylesheet" href="./css/jquery.mobile-1.4.5.min.css" />
+        <link rel="stylesheet" type="text/css" href="./css/index.css">
+        <title>Exhi-bits</title>
+    </head>
+    <body>
+
+        <!--  ***************************************************************   --->
+        <div data-role="page" id="Home">
+
+            <div data-role="header" class="header" data-position="fixed">
+                <h1 id="app-title">Exhi-bits</h1>
+                <div data-role="navbar">
+                    <ul>
+                        <li><a href="#attention" data-role="button" data-icon="arrow-r">Can we have your attention?</a></li>
+                        <li><a href="#use-cases" data-role="button" data-icon="arrow-r">Sample use cases</a></li>
+                        <li><a href="#markets" data-role="button" data-icon="arrow-r">The world is a marketplace</a></li>
+                        <li><a href="#the-team" data-role="button" data-icon="arrow-r">The team</a></li>
+                        <li><a href="#contact" data-role="button" data-icon="arrow-r">Get in touch</a></li>
+                    </ul>
+                </div><!-- /navbar -->
+            </div>
+
+            <div data-role="header" class="header" data-position="fixed">
+                <h4 id="app-title">Restart</h4>
+                <a href="/" class="ui-btn ui-btn-right ui-btn-corner-all ui-icon-home ui-btn-icon-notext" rel="external" data-position="fixed">Home</a>
+            </div>
+
+
+                <div role="main" class="ui-content">
+                    <form>
+                        <label for="zip-code">Type your zip code:</label>
+                        <input id="zip-code-input" name="zip-code" placeholder="eg. 98001" required />
+                        <button id="get-weather-btn" data-role="button" data-icon="search">Find Weather</button>
+                    </form>
+
+                    <ul id="weather-data" data-role="listview" data-inset="true" class="ui-listview ui-listview-inset ui-corner-all ui-shadow not-displayed">
+                        <li data-role="list-divider" id="title" class="ui-li-divider ui-bar-a"></li>
+                        <li><span id="summary"><span id="temperature"></span> F <img src="" /></span></li>
+                        <li>Wind: <span id="wind"></span> knots</li>
+                        <li>Humidity: <span id="humidity"></span> %</li>
+                        <li>Visibility: <span id="visibility"></span></li>
+                        <li>Sunrise: <span id="sunrise"></span></li>
+                        <li>Sunset: <span id="sunset"></span></li>
+                    </ul>
+
+                    <div id="error-msg" class="not-displayed">
+                    </div>
+
+                </div>
+
+
+            </div>
+
+        <!--  ***************************************************************   --->
+
+        <div data-role="page" id="attention" data-add-back-btn="true">
+
+            <div data-role="header" class="header" data-position="fixed">
+                <h1 id="app-title">Can we have your attention?</h1>
+            </div>
+
+            <div role="main" class="ui-content">
+                <div>
+                    <button id="hackathon_success-btn" data-role="button" data-icon="arrow-r">Hackathon Success</button>
+                    <button id="prototyping-btn" data-role="button" data-icon="arrow-r">Early Stage Prototyping</button>
+                </div>
+
+
+                <div id="error-msg" class="not-displayed">
+                </div>
+
+            </div>
+            
+        </div>
+
+        <!--  ***************************************************************   --->
+
+        <div data-role="page" id="use-cases" data-add-back-btn="true">
+
+            <div data-role="header" class="header" data-position="fixed">
+                <h1 id="app-title">Sample use cases</h1>
+            </div>
+
+            <div role="main" class="ui-content">
+                <div>
+                    <button id="storytelling-btn" data-role="button" data-icon="arrow-r">Augmented Storytelling</button>
+                    <button id="showroom-btn" data-role="button" data-icon="arrow-r">Virtual Showroom</button>
+                    <button id="marketing-btn" data-role="button" data-icon="arrow-r">Autonomous Marketing</button>
+                    <button id="mixed-reality-btn" data-role="button" data-icon="arrow-r">Room Scale Mixed Reality</button>
+                    <button id="theatre-btn" data-role="button" data-icon="arrow-r">Immersive Theatre</button>
+
+                </div>
+
+                <!--  ********   --->
+
+                <div>
+                    <div data-role="header" class="header" data-position="fixed">
+                        <h3 id="buy-btn-title">Buy Sicilianlion </h3>
+                    </div>
+                    <form target="_self" action="https://securepay.demo.securenet.com/onlinebutton/default.aspx" method="post">
+                        <input type='hidden' name='default_style' value=''>
+                        <input type="hidden" name="hosted_button_id" value="b9a29edb-65a1-449d-948e-7fb6119ecb9b">
+                        <table><tr><td>Quantity in sqm</td></tr><tr><td><select name='Dropwith'><Option value='10sqm $500'>10sqm $500</Option><Option value='1sqm $50'>1sqm $50</Option><Option value='5sqm $250'>5sqm $250</Option></td></tr><tr><td>PalladioSicilianlion Code</td></tr> <tr><td><input type='text' name='txfil' maxlength='30'></td></tr></table>
+                        <userdefinedfield>
+                            <input type="image" src="https://securepay.securenet.com/images/btn_buynow.gif" border="0" name="submit"
+                                   alt="Securenet - The safer, easier way to pay online!">
+                    </form>
+                </div>
+
+                <!--  ********   --->
+                <div>
+                    <div data-role="header" class="header" data-position="fixed">
+                        <h3 id="buy-btn-title">Buy Gala </h3>
+                    </div>
+                    <form target="_self" action="https://securepay.demo.securenet.com/onlinebutton/default.aspx" method="post">
+                        <input type='hidden' name='default_style' value=''>
+                        <input type="hidden" name="hosted_button_id" value="030480c1-ac28-42cf-9e02-54ca4b3e72a8">
+                        <table><tr><td>Quantity in sqm</td></tr><tr><td><select name='Dropwith'><Option value='10sqm $500'>10sqm $500</Option><Option value='1sqm $50'>1sqm $50</Option><Option value='5sqm $250'>5sqm $250</Option></td></tr><tr><td>Palladio Gala Code</td></tr> <tr><td><input type='text' name='txfil' maxlength='30'></td></tr></table>
+                        <userdefinedfield>
+                            <input type="image" src="https://securepay.securenet.com/images/btn_buynow.gif" border="0" name="submit"
+                                   alt="Securenet - The safer, easier way to pay online!">
+                    </form>
+                </div>
+                
+                <!--  ********   --->
+                <div>
+                    <div data-role="header" class="header" data-position="fixed">
+                        <h3 id="buy-btn-title">Buy Bardfield </h3>
+                    </div>
+                    <form target="_self" action="https://securepay.demo.securenet.com/onlinebutton/default.aspx" method="post">
+                        <input type='hidden' name='default_style' value=''>
+                        <input type="hidden" name="hosted_button_id" value="7781fb76-6412-4c92-bbe6-659531933467">
+                        <table><tr><td>Quantity in sqm</td></tr><tr><td><select name='Dropwith'><Option value='10sqm $1300'>10sqm $1300</Option><Option value='1sqm $130'>1sqm $130</Option><Option value='5sqm $650'>5sqm $650</Option></td></tr><tr><td>Palladio Bardfield Code</td></tr> <tr><td><input type='text' name='txfil' maxlength='30'></td></tr></table>
+                        <userdefinedfield>
+                            <input type="image" src="https://securepay.securenet.com/images/btn_buynow.gif" border="0" name="submit"
+                                   alt="Securenet - The safer, easier way to pay online!">
+                    </form>
+                </div>
+
+                <!--  ********   --->
+                <div>
+                    <div data-role="header" class="header" data-position="fixed">
+                        <h3 id="buy-btn-title">Buy Unicorns </h3>
+                    </div>
+                    <form target="_self" action="https://securepay.demo.securenet.com/onlinebutton/default.aspx" method="post">
+                        <input type='hidden' name='default_style' value=''>
+                        <input type="hidden" name="hosted_button_id" value="e16c1384-2817-443d-96e0-b56d2a8e11f0">
+                        <table><tr><td>Quantity in sqm</td></tr><tr><td><select name='Dropwith'><Option value='10sqm $1000'>10sqm $1000</Option><Option value='1sqm $100'>1sqm $100</Option><Option value='5sqm $500'>5sqm $500</Option></td></tr><tr><td>Palladio Unicorns Code</td></tr> <tr><td><input type='text' name='txfil' maxlength='30'></td></tr></table>
+                        <userdefinedfield>
+                            <input type="image" src="https://securepay.securenet.com/images/btn_buynow.gif" border="0" name="submit"
+                                   alt="Securenet - The safer, easier way to pay online!">
+                    </form>
+                </div>
+
+                <!--  ********   --->
+                <div>
+                    <div data-role="header" class="header" data-position="fixed">
+                        <h3 id="buy-btn-title">Buy Cluster </h3>
+                    </div>
+                    <form target="_self" action="https://securepay.demo.securenet.com/onlinebutton/default.aspx" method="post">
+                        <input type='hidden' name='default_style' value=''>
+                        <input type="hidden" name="hosted_button_id" value="b6839411-c05b-4952-888a-ea2be6540b82">
+                        <table><tr><td>Quantity in sqm</td></tr><tr><td><select name='Dropwith'><Option value='10sqm $600'>10sqm $600</Option><Option value='1sqm $60'>1sqm $60</Option><Option value='5sqm $300'>5sqm $300</Option></td></tr><tr><td>Palladio Cluster Code</td></tr> <tr><td><input type='text' name='txfil' maxlength='30'></td></tr></table>
+                        <userdefinedfield>
+                            <input type="image" src="https://securepay.securenet.com/images/btn_buynow.gif" border="0" name="submit"
+                                   alt="Securenet - The safer, easier way to pay online!">
+                    </form>
+                </div>
+
+                <!--  ********   --->
+                <div>
+                    <div data-role="header" class="header" data-position="fixed">
+                        <h3 id="buy-btn-title">Buy Treescape </h3>
+                    </div>
+                    <form target="_self" action="https://securepay.demo.securenet.com/onlinebutton/default.aspx" method="post">
+                        <input type='hidden' name='default_style' value=''>
+                        <input type="hidden" name="hosted_button_id" value="61b39acd-7dca-457c-9b54-cc14d86a8c0f">
+                        <table><tr><td>Quantity in sqm</td></tr><tr><td><select name='Dropwith'><Option value='10sqm $300'>10sqm $300</Option><Option value='1sqm $30'>1sqm $30</Option><Option value='5sqm $150'>5sqm $150</Option></td></tr><tr><td>Palladio Treescape Code</td></tr> <tr><td><input type='text' name='txfil' maxlength='30'></td></tr></table>
+                        <userdefinedfield>
+                            <input type="image" src="https://securepay.securenet.com/images/btn_buynow.gif" border="0" name="submit"
+                                   alt="Securenet - The safer, easier way to pay online!">
+                    </form>
+                </div>
+
+                <!--  ********   --->
+                <div>
+                    <div data-role="header" class="header" data-position="fixed">
+                        <h3 id="buy-btn-title">Buy Montacute </h3>
+                    </div>
+                    <form target="_self" action="https://securepay.demo.securenet.com/onlinebutton/default.aspx" method="post">
+                        <input type='hidden' name='default_style' value=''>
+                        <input type="hidden" name="hosted_button_id" value="65bed6c9-9ee1-4c81-8b02-886077b81b3d">
+                        <table><tr><td>Quantity in sqm</td></tr><tr><td><select name='Dropwith'><Option value='10sqm $700'>10sqm $700</Option><Option value='1sqm $70'>1sqm $70</Option><Option value='5sqm $350'>5sqm $350</Option></td></tr><tr><td>Palladio Montacute Code</td></tr> <tr><td><input type='text' name='txfil' maxlength='30'></td></tr></table>
+                        <userdefinedfield>
+                            <input type="image" src="https://securepay.securenet.com/images/btn_buynow.gif" border="0" name="submit"
+                                   alt="Securenet - The safer, easier way to pay online!">
+                    </form>
+                </div>
+
+                <!--  ********   --->
+                <div>
+                    <div data-role="header" class="header" data-position="fixed">
+                        <h3 id="buy-btn-title">Buy Schema </h3>
+                    </div>
+                    <form target="_self" action="https://securepay.demo.securenet.com/onlinebutton/default.aspx" method="post">
+                        <input type='hidden' name='default_style' value=''>
+                        <input type="hidden" name="hosted_button_id" value="6b3338c9-8650-44ad-b610-e76dbbae0ba8">
+                        <table><tr><td>Quantity in sqm</td></tr><tr><td><select name='Dropwith'><Option value='10sqm $500'>10sqm $500</Option><Option value='1sqm $50'>1sqm $50</Option><Option value='5sqm $250'>5sqm $250</Option></td></tr><tr><td>Palladio Schema Code</td></tr> <tr><td><input type='text' name='txfil' maxlength='30'></td></tr></table>
+                        <userdefinedfield>
+                            <input type="image" src="https://securepay.securenet.com/images/btn_buynow.gif" border="0" name="submit"
+                                   alt="Securenet - The safer, easier way to pay online!">
+                    </form>
+                </div>
+
+                <!--  ********   --->
+
+
+                <div id="error-msg" class="not-displayed">
+                </div>
+
+            </div>
+
+          </div>
+
+
+        <!--  ***************************************************************   --->
+
+        <div data-role="page" id="markets" data-add-back-btn="true">
+
+            <div data-role="header" class="header" data-position="fixed">
+                <h1 id="app-title">The world is a marketplace</h1>
+            </div>
+
+            <div role="main" class="ui-content">
+                <div>
+                    <button id="retail-btn" data-role="button" data-icon="arrow-r">Retail</button>
+                    <button id="libraries-btn" data-role="button" data-icon="arrow-r">Libraries and Educational Establishments</button>
+                    <button id="tradeshows-btn" data-role="button" data-icon="arrow-r">Tradeshows and Exhibitions</button>
+                    <button id="events-btn" data-role="button" data-icon="arrow-r">Events and Performances</button>
+                    <button id="solutions-btn" data-role="button" data-icon="arrow-r">Custom Solutions</button>
+                    <button id="advertising-btn" data-role="button" data-icon="arrow-r">Advertising</button>
+                </div>
+
+
+                <div id="error-msg" class="not-displayed">
+                </div>
+
+            </div>
+
+            
+        </div>
+
+
+        <!--  ***************************************************************   --->
+
+        <div data-role="page" id="the-team" data-add-back-btn="true">
+
+            <div data-role="header" class="header" data-position="fixed">
+                <h1 id="app-title">The team</h1>
+            </div>
+
+            <div role="main" class="ui-content">
+                <div>
+                    <button id="ayo-btn" data-role="button" data-icon="arrow-r">Ayodele Arigbabu</button>
+                    <button id="seun-btn" data-role="button" data-icon="arrow-r">Seun Osinaike</button>
+                    <button id="justinas-btn" data-role="button" data-icon="arrow-r">Justinas Grigas</button>
+                    <button id="ebenezer-btn" data-role="button" data-icon="arrow-r">Ebenezer Odubanjo</button>
+                </div>
+
+
+                <div id="error-msg" class="not-displayed">
+                </div>
+
+            </div>
+        </div>
+
+            <!--  ***************************************************************   --->
+
+            <div data-role="page" id="contact" data-add-back-btn="true">
+
+                <div data-role="header" class="header" data-position="fixed">
+                    <h1 id="app-title">Get in touch</h1>
+                </div>
+
+                <div role="main" class="ui-content">
+                    <div>
+                        <button id="mail" data-role="button" data-icon="arrow-r">Send a mail</button>
+                        <button id="facebook" data-role="button" data-icon="arrow-r">Keep up on Facebook</button>
+                    </div>
+
+
+                    <div id="error-msg" class="not-displayed">
+                    </div>
+
+                </div>
+
+                <div data-role="footer" data-id="foot1" data-position="fixed" data-iconpos="left">
+                    <div data-role="navbar">
+                        <ul>
+                            <li><a href="#attention" data-role="button" data-icon="arrow-r">Can we have your attention?</a></li>
+                            <li><a href="#use-cases" data-role="button" data-icon="arrow-r">Sample use cases</a></li>
+                            <li><a href="#markets" data-role="button" data-icon="arrow-r">The world is a marketplace</a></li>
+                            <li><a href="#the-team" data-role="button" data-icon="arrow-r">The team</a></li>
+                            <li><a href="#contact" data-role="button" data-icon="arrow-r">Get in touch</a></li>
+                        </ul>
+                    </div><!-- /navbar -->
+                    <h4>&copy; Exhi-bits 2016 </h4>
+                </div>
+
+            </div>
+
+
+            <!--  ***************************************************************   --->
+
+            <script type="text/javascript" src="cordova.js"></script>
+            <script type="text/javascript" src="scripts/platformOverrides.js"></script>
+            <script type="text/javascript" src="scripts/index.js"></script>
+            <script src="scripts/jquery-3.0.0.min.js"></script>
+            <script src="scripts/jquery.mobile-1.4.5.min.js"></script>
+            <script src="scripts/weather.js"></script>
+</body>
+</html>
